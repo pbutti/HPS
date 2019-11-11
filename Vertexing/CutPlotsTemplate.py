@@ -6,6 +6,8 @@ import ROOT
 from ROOT import gROOT, TFile, TTree, TChain, gDirectory, TLine, gStyle, TCanvas, TLegend, TH1F
 sys.argv = tmpargv
 
+gROOT.SetBatch(1)
+
 #List arguments
 def print_usage():
     print "\nUsage: {0} <output file base name> <input file name>".format(sys.argv[0])
@@ -22,9 +24,9 @@ def print_usage():
     print
 
 #Default Values
-minVZ = -30
-maxVZ = 30
-nBins = 100
+minVZ = -50
+maxVZ = 100
+nBins = 300
 energy = 2.3
 trackTDiff = 43 #only for MC, should be ~55 for data
 beamX = -0.224
